@@ -1,0 +1,360 @@
+
+/* =========================================
+   CHURNIQ - CUSTOMERS PAGE
+========================================= */
+
+.customers-page {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+}
+
+/* Export Button */
+
+.export-button {
+  background: linear-gradient(100deg, #8264ed, #a077ff);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.export-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(130, 100, 237, 0.25);
+}
+
+/* Customer Statistics */
+
+.customer-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 30px 0;
+  width: 100%;
+  min-width: 0;
+}
+
+.customer-stat-card {
+  min-width: 0;
+  background: #111b30;
+  border: 1px solid #253149;
+  border-radius: 12px;
+  padding: 22px;
+  box-sizing: border-box;
+}
+
+.customer-stat-card span {
+  color: #8999b5;
+  font-size: 13px;
+}
+
+.customer-stat-card h2 {
+  color: #e8edf8;
+  font-size: 25px;
+  margin-top: 12px;
+  overflow-wrap: anywhere;
+}
+
+/* Customer Table Panel */
+
+.customer-table-panel {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  background: #111b30;
+  border: 1px solid #253149;
+  border-radius: 13px;
+  padding: 22px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Search and Filter */
+
+.customer-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 22px;
+  width: 100%;
+  min-width: 0;
+}
+
+.customer-toolbar input,
+.customer-toolbar select {
+  height: 43px;
+  padding: 0 13px;
+  background: #0b1427;
+  color: #e8edf8;
+  border: 1px solid #2b3a55;
+  border-radius: 7px;
+  outline: none;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+.customer-toolbar input {
+  width: 100%;
+  max-width: 380px;
+  min-width: 0;
+}
+
+.customer-toolbar select {
+  min-width: 170px;
+  max-width: 100%;
+}
+
+.customer-toolbar input:focus,
+.customer-toolbar select:focus {
+  border-color: #9275ff;
+  box-shadow: 0 0 0 3px rgba(146, 117, 255, 0.12);
+}
+
+/* Table Scroll Container */
+
+.table-scroll {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #52617d #111b30;
+}
+
+.table-scroll::-webkit-scrollbar {
+  height: 7px;
+}
+
+.table-scroll::-webkit-scrollbar-track {
+  background: #111b30;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+  background: #52617d;
+  border-radius: 10px;
+}
+
+/* Customer Table */
+
+.customer-table {
+  width: 100%;
+  min-width: 750px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.customer-table th {
+  text-align: left;
+  padding: 16px 13px;
+  color: #8999b5;
+  font-size: 12px;
+  font-weight: 600;
+  border-bottom: 1px solid #293750;
+  white-space: nowrap;
+}
+
+.customer-table td {
+  padding: 17px 13px;
+  color: #b8c5dc;
+  font-size: 13px;
+  border-bottom: 1px solid #253149;
+  white-space: nowrap;
+}
+
+.customer-table tbody tr:hover {
+  background: #19243b;
+}
+
+.customer-id {
+  color: #a78bfa !important;
+  font-weight: 600;
+}
+
+/* Customer Status */
+
+.customer-status {
+  display: inline-block;
+  padding: 6px 11px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.status-churn {
+  background: rgba(239, 83, 99, 0.14);
+  color: #ff8290;
+}
+
+.status-active {
+  background: rgba(53, 198, 181, 0.14);
+  color: #35c6b5;
+}
+
+/* Loading and Empty States */
+
+.table-message {
+  text-align: center;
+  padding: 35px !important;
+  color: #8999b5 !important;
+}
+
+.customer-error {
+  padding: 13px;
+  margin-bottom: 15px;
+  color: #ff858f;
+  background: rgba(239, 83, 99, 0.1);
+  border: 1px solid #a74755;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+/* Pagination */
+
+.customer-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding-top: 22px;
+  color: #8999b5;
+  font-size: 12px;
+  min-width: 0;
+}
+
+.customer-pagination div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.customer-pagination strong {
+  color: #e8edf8;
+}
+
+.customer-pagination button {
+  padding: 9px 13px;
+  background: #19243b;
+  border: 1px solid #2b3a55;
+  border-radius: 7px;
+  color: #b8c5dc;
+  cursor: pointer;
+}
+
+.customer-pagination button:hover:not(:disabled) {
+  background: #253149;
+}
+
+.customer-pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Tablet */
+
+@media (max-width: 850px) {
+  .customer-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .customer-toolbar {
+    flex-direction: column;
+  }
+
+  .customer-toolbar input {
+    max-width: none;
+  }
+
+  .customer-toolbar select {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .customer-pagination {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .customers-page {
+    padding-bottom: 30px;
+  }
+
+  .customer-stats {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  .customer-stat-card {
+    padding: 17px;
+  }
+
+  .customer-stat-card h2 {
+    font-size: 22px;
+  }
+
+  .customer-table-panel {
+    padding: 14px;
+  }
+
+  .customer-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .customer-toolbar input,
+  .customer-toolbar select {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .table-scroll {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .customer-table {
+    width: 750px;
+    min-width: 750px;
+  }
+
+  .customer-pagination {
+    gap: 12px;
+    font-size: 11px;
+  }
+
+  .customer-pagination div {
+    flex-wrap: wrap;
+  }
+}
+
+/* Very Narrow Screens */
+
+@media (max-width: 360px) {
+  .customer-stat-card {
+    padding: 14px;
+  }
+
+  .customer-table-panel {
+    padding: 11px;
+  }
+
+  .customer-pagination button {
+    padding: 8px 10px;
+  }
+}

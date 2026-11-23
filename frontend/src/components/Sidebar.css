@@ -1,0 +1,230 @@
+
+/* ==============================
+   MAIN SIDEBAR
+================================ */
+
+.sidebar {
+  width: 263px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #10182c;
+  border-right: 1px solid #253149;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 20px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  z-index: 100;
+  overflow-x: hidden;
+}
+
+/* ==============================
+   BRAND
+================================ */
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 60px;
+  min-width: 0;
+}
+
+.brand-logo {
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #9275ff, #35c6b5);
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  font-weight: 800;
+  color: white;
+  flex-shrink: 0;
+}
+
+.sidebar-brand h2 {
+  font-size: 21px;
+  color: #f1f5ff;
+  margin: 0 0 4px;
+}
+
+.sidebar-brand span {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: #8fa3c7;
+  white-space: nowrap;
+}
+
+/* ==============================
+   NAVIGATION SECTION
+================================ */
+
+.sidebar-section {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #7185aa;
+  margin-bottom: 16px;
+  padding-left: 10px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 13px;
+  text-decoration: none;
+  color: #a8b9d8;
+  border-radius: 11px;
+  transition: 0.2s ease;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.sidebar-link:hover {
+  background: #1a2742;
+  color: white;
+}
+
+.sidebar-link.active {
+  background: #202e4c;
+  color: #a38aff;
+}
+
+.sidebar-icon {
+  width: 19px;
+  text-align: center;
+  font-size: 19px;
+  flex-shrink: 0;
+}
+
+.sidebar-link-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ==============================
+   SIDEBAR FOOTER
+================================ */
+
+.sidebar-footer {
+  margin-top: auto;
+  border-top: 1px solid #253149;
+  padding-top: 20px;
+  color: #8fa3c7;
+  font-size: 12px;
+}
+
+.system-status {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 12px;
+  white-space: nowrap;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #35c6b5;
+  flex-shrink: 0;
+}
+
+.sidebar-footer p {
+  color: #667b9f;
+  margin: 0;
+}
+
+/* ==============================
+   TABLET RESPONSIVE
+================================ */
+
+@media (max-width: 1024px) {
+
+  .sidebar {
+    width: 76px;
+    padding: 22px 10px;
+  }
+
+  .sidebar-brand {
+    justify-content: center;
+    margin-bottom: 48px;
+  }
+
+  .sidebar-brand .brand-text,
+  .sidebar-section,
+  .sidebar-footer p,
+  .sidebar-link-text,
+  .system-status-text {
+    display: none;
+  }
+
+  .sidebar-link {
+    justify-content: center;
+    padding: 15px 8px;
+    gap: 0;
+    font-size: 0;
+  }
+
+  .sidebar-icon {
+    font-size: 19px;
+  }
+
+  .sidebar-footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 17px;
+  }
+
+  .system-status {
+    justify-content: center;
+    margin: 0;
+    font-size: 0;
+  }
+}
+
+/* ==============================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 650px) {
+
+  .sidebar {
+    width: 64px;
+    padding: 18px 8px;
+  }
+
+  .brand-logo {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    border-radius: 11px;
+  }
+
+  .sidebar-brand {
+    justify-content: center;
+    margin-bottom: 35px;
+  }
+
+  .sidebar-nav {
+    gap: 8px;
+  }
+
+  .sidebar-link {
+    min-height: 45px;
+    padding: 12px 5px;
+  }
+
+  .sidebar-footer {
+    padding-top: 14px;
+  }
+}

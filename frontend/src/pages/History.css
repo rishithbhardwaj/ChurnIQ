@@ -1,0 +1,202 @@
+
+.history-page {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.history-refresh {
+  padding: 12px 20px;
+  border: 1px solid #34415c;
+  border-radius: 9px;
+  background: #172238;
+  color: #e8edf8;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.history-refresh:hover {
+  background: #253452;
+}
+
+.history-refresh:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.history-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.history-stat-card {
+  padding: 25px;
+  background: #111b30;
+  border: 1px solid #26344d;
+  border-radius: 14px;
+}
+
+.history-stat-card span {
+  color: #9eacc5;
+  font-size: 13px;
+}
+
+.history-stat-card h2 {
+  margin: 17px 0 7px;
+  font-size: 30px;
+  color: #f0f3fa;
+}
+
+.history-stat-card p {
+  margin: 0;
+  color: #8293b1;
+  font-size: 12px;
+}
+
+.history-stat-card .history-danger {
+  color: #ff777d;
+}
+
+.history-stat-card .history-success {
+  color: #35c6b5;
+}
+
+.history-panel {
+  padding: 26px;
+  min-width: 0;
+}
+
+.history-toolbar {
+  display: flex;
+  gap: 14px;
+  margin: 25px 0;
+}
+
+.history-toolbar input,
+.history-toolbar select {
+  min-height: 46px;
+  padding: 0 15px;
+  background: #0d1729;
+  border: 1px solid #2b3a55;
+  border-radius: 9px;
+  color: #e8edf8;
+  font: inherit;
+  outline: none;
+}
+
+.history-toolbar input {
+  flex: 1;
+  min-width: 0;
+}
+
+.history-toolbar input:focus,
+.history-toolbar select:focus {
+  border-color: #9275ff;
+}
+
+.history-toolbar select {
+  min-width: 180px;
+  cursor: pointer;
+}
+
+.history-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.history-table th {
+  padding: 16px 14px;
+  color: #8497b8;
+  font-size: 12px;
+  font-weight: 600;
+  border-bottom: 1px solid #293650;
+}
+
+.history-table td {
+  padding: 19px 14px;
+  color: #dce5f5;
+  font-size: 13px;
+  border-bottom: 1px solid #243149;
+}
+
+.history-table tbody tr:hover {
+  background: #18243a;
+}
+
+.history-badge {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.churn-badge {
+  color: #ff8589;
+  background: #38232f;
+}
+
+.retained-badge {
+  color: #35c6b5;
+  background: #153735;
+}
+
+.history-message {
+  padding: 45px 15px;
+  text-align: center;
+  color: #91a1bd;
+}
+
+.history-error {
+  padding: 25px;
+  border: 1px solid #743b4a;
+  border-radius: 10px;
+  background: #281b2a;
+  color: #ff9297;
+}
+
+.history-error p {
+  margin: 8px 0 15px;
+}
+
+.history-error button {
+  padding: 9px 16px;
+  border: 0;
+  border-radius: 7px;
+  background: #9275ff;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+  .history-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .history-toolbar {
+    flex-direction: column;
+  }
+
+  .history-toolbar select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .history-panel {
+    padding: 16px;
+  }
+
+  .history-stat-card {
+    padding: 19px;
+  }
+}

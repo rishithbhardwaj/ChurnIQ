@@ -1,0 +1,200 @@
+
+.analytics-page {
+  padding-bottom: 50px;
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 25px;
+}
+
+.analytics-panel {
+  min-width: 0;
+  padding: 25px;
+}
+
+.analytics-panel .panel-header {
+  margin-bottom: 15px;
+}
+
+.analytics-panel .panel-header h3 {
+  color: #e8edf8;
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.analytics-panel .panel-header p {
+  color: #8999b5;
+  font-size: 13px;
+}
+
+.analytics-chart {
+  width: 100%;
+  min-width: 0;
+  margin-top: 15px;
+}
+
+.analytics-chart .recharts-text {
+  fill: #8999b5;
+  font-size: 11px;
+}
+
+.analytics-chart .recharts-legend-item-text {
+  color: #aebbd1 !important;
+}
+
+.analytics-chart .recharts-tooltip-label {
+  color: #e8edf8;
+}
+
+.charges-panel {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 1000px) {
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .charges-panel {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 650px) {
+  .analytics-panel {
+    padding: 16px;
+  }
+}
+
+/* Customer Retention Insights */
+
+.insights-section {
+  margin-top: 32px;
+}
+
+.insights-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.insights-heading h2 {
+  font-size: 23px;
+  margin: 7px 0;
+  color: #e8edf8;
+}
+
+.insight-count {
+  background: #1b2540;
+  color: #a78bfa;
+  border: 1px solid #34405e;
+  padding: 9px 13px;
+  border-radius: 9px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  white-space: nowrap;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.insight-card {
+  background: #111b30;
+  border: 1px solid #253149;
+  border-radius: 15px;
+  padding: 23px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.insight-card:hover {
+  border-color: #9275ff;
+  transform: translateY(-3px);
+}
+
+.insight-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.insight-number {
+  color: #8999b5;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.insight-rate {
+  color: #ff858f;
+  background: rgba(255, 100, 120, 0.1);
+  border: 1px solid rgba(255, 100, 120, 0.2);
+  padding: 7px 11px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.insight-card h3 {
+  color: #e8edf8;
+  font-size: 17px;
+  margin: 0 0 12px;
+}
+
+.insight-description {
+  color: #9baac3;
+  font-size: 13px;
+  line-height: 1.7;
+  min-height: 44px;
+  margin-bottom: 20px;
+}
+
+.insight-recommendation {
+  background: #17243a;
+  border-left: 3px solid #35c6b5;
+  border-radius: 7px;
+  padding: 14px;
+}
+
+.insight-recommendation span {
+  color: #35c6b5;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.insight-recommendation p {
+  color: #d5deed;
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 8px 0 0;
+}
+
+@media (max-width: 800px) {
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .insights-heading {
+    align-items: flex-start;
+  }
+
+  .insights-heading h2 {
+    font-size: 20px;
+  }
+
+  .insight-card {
+    padding: 18px;
+  }
+}
