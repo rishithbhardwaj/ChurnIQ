@@ -71,7 +71,7 @@ ChurnIQ/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ChurnIQ.git
+git clone https://github.com/rihithbhardwaj/ChurnIQ.git
 cd ChurnIQ
 ```
 
