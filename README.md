@@ -138,6 +138,4 @@ Developed as a machine learning and full-stack development project.
 
 Rishith Bhardwaj
 
-B.Tech — Electronics and Communication Engineering
-
 GitHub: https://github.com/rishithbhardwaj
