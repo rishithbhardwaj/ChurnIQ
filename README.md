@@ -1,60 +1,89 @@
-# ChurnIQ — Customer Churn Prediction
+# ChurnIQ — Customer Churn Prediction Platform
 
-ChurnIQ is a machine learning-based customer churn prediction system built using Python, Flask, React, and SQLite. It helps analyze customer data, predict churn probability, and visualize patterns that can support customer retention decisions.
+ChurnIQ is a machine learning-powered customer intelligence platform that predicts customer churn and helps businesses identify customers who are likely to discontinue their services.
+
+The application combines a trained XGBoost classification model with an interactive React dashboard and Flask API to provide customer predictions, analytics, and prediction history.
+
+## Live Demo
+
+**Frontend:** https://churn-42pm5ximj-churn-iq.vercel.app/
+
+**GitHub Repository:** https://github.com/rishithbhardwaj/ChurnIQ
 
 ## Features
 
-- **Customer Churn Prediction:** Predict whether a customer is likely to leave.
-- **Churn Probability:** Display the model's estimated churn probability.
-- **Analytics Dashboard:** Visualize churn distribution, contract patterns, payment methods, and customer tenure.
-- **Customer Explorer:** Search, filter, and browse customer records.
-- **Prediction History:** Store and review previous predictions.
-- **CSV Export:** Export customer data from the customer explorer.
-- **Responsive Interface:** Dark-themed dashboard designed for different screen sizes.
+- **Customer Churn Prediction:** Predict whether a customer is likely to churn using a trained machine learning model.
+- **Churn Probability:** Display the estimated probability of customer churn.
+- **Customer Management:** Browse, search, and filter customer records.
+- **Analytics Dashboard:** Visualize customer distribution, churn rate, and retention metrics.
+- **Business Insights:** Present insights derived from customer data.
+- **Prediction History:** Store and review previous prediction records.
+- **Responsive Interface:** Modern dashboard designed for different screen sizes.
+- **REST API:** Flask backend connects the machine learning model to the frontend.
 
-## Tech Stack
+## Model Performance
 
-| Area | Technologies |
-|---|---|
-| Frontend | React, Vite, CSS |
-| Backend | Python, Flask |
-| Machine Learning | Scikit-learn, XGBoost, Pandas, NumPy |
-| Data Visualization | Recharts |
-| Database | SQLite |
-| Model Persistence | Joblib |
+The project evaluates multiple machine learning algorithms and uses hyperparameter tuning with cross-validation to select the best-performing model.
 
-## Machine Learning
+| Metric | Result |
+|---|---:|
+| Selected Model | XGBoost |
+| Test Accuracy | 76.15% |
+| Test F1-Score | 0.6371 |
 
-The project uses the Telco Customer Churn dataset.
+*Results are from the project's reported test-set evaluation.*
 
-Models evaluated:
-- Logistic Regression
-- Decision Tree
-- Random Forest
+## Technology Stack
+
+**Frontend**
+- React.js
+- Vite
+- JavaScript
+- HTML5
+- CSS3
+
+**Backend**
+- Python
+- Flask
+- REST API
+
+**Machine Learning**
+- Scikit-learn
 - XGBoost
+- Pandas
+- NumPy
+- Joblib
 
-The models were compared using cross-validation with F1-score as the primary selection metric. XGBoost achieved the best cross-validation F1-score among the evaluated models.
+**Database**
+- SQLite
 
-The preprocessing pipeline includes:
-- Handling missing values
-- Numerical feature scaling
-- Categorical feature encoding
-- Stratified train-test splitting
+**Deployment**
+- Vercel — Frontend
+- Render — Backend
 
 ## Project Structure
 
 ```text
 ChurnIQ/
+│
 ├── data/
 │   ├── raw/
 │   └── processed/
+│
 ├── frontend/
 │   ├── public/
 │   └── src/
 │       ├── components/
-│       └── pages/
+│       ├── pages/
+│       ├── App.jsx
+│       └── main.jsx
+│
 ├── models/
+│   ├── best_churn_model.pkl
+│   └── preprocessor.joblib
+│
 ├── reports/
+│
 ├── src/
 │   ├── app.py
 │   ├── data_inspection.py
@@ -62,26 +91,27 @@ ChurnIQ/
 │   ├── eda.py
 │   ├── feature_engineering.py
 │   └── model_training.py
+│
 ├── requirements.txt
-└── .gitignore
+└── README.md
 ```
 
-## Getting Started
+## Run Locally
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/rihithbhardwaj/ChurnIQ.git
+git clone https://github.com/rishithbhardwaj/ChurnIQ.git
 cd ChurnIQ
 ```
 
-### 2. Set up the Python environment
+### 2. Set up the Python backend
 
 ```bash
 python -m venv .venv
 ```
 
-Activate it on Windows:
+Activate the environment on Windows:
 
 ```powershell
 .venv\Scripts\Activate.ps1
@@ -93,7 +123,7 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-### 3. Start the Flask backend
+Start the Flask server:
 
 ```bash
 python src/app.py
@@ -103,7 +133,7 @@ The backend runs at:
 
 `http://127.0.0.1:5000`
 
-### 4. Start the React frontend
+### 3. Set up the React frontend
 
 Open another terminal:
 
@@ -113,26 +143,25 @@ npm install
 npm run dev
 ```
 
-Open the local URL displayed by Vite, usually:
+Open the local Vite URL shown in the terminal, usually:
 
 `http://localhost:5173`
 
-## Model Performance
+## Machine Learning Workflow
 
-The best model was selected using cross-validation F1-score.
+1. Dataset inspection and exploratory data analysis.
+2. Data cleaning and preprocessing.
+3. Feature engineering.
+4. Model training and comparison.
+5. Hyperparameter tuning and cross-validation.
+6. Model evaluation on the test dataset.
+7. Saving the trained model and preprocessing pipeline.
+8. Integrating the model with the Flask API.
+9. Displaying predictions and analytics through the React dashboard.
 
-| Model | Cross-validation F1-score |
-|---|---:|
-| Logistic Regression | 0.6293 |
-| Decision Tree | 0.5863 |
-| Random Forest | 0.6324 |
-| XGBoost | 0.6347 |
+## Project Objective
 
-*These are cross-validation scores, not test-set scores.*
-
-## Project Status
-
-Developed as a machine learning and full-stack development project.
+The objective of ChurnIQ is to demonstrate how machine learning can support customer retention by identifying potential churn risks and presenting actionable customer intelligence through an interactive web application.
 
 ## Author
 
