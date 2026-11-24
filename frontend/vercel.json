@@ -1,0 +1,9 @@
+
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://churniq-backend-j7jo.onrender.com/:path*"
+    }
+  ]
+}
