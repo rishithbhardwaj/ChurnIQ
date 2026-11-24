@@ -24,5 +24,6 @@ Thumbs.db
 *.log
 
 # Dataset files
-data/raw/
+data/raw/*
+!data/raw/WA_Fn-UseC_-Telco-Customer-Churn.csv
 data/processed/
