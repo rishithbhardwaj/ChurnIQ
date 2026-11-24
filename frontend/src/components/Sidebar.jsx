@@ -13,10 +13,13 @@ const navigation = [
 function Sidebar() {
   return (
     <aside className="sidebar">
-
       {/* Brand */}
       <div className="sidebar-brand">
-        <div className="brand-logo">C</div>
+        <img
+          src="/churniq.svg"
+          alt="ChurnIQ Logo"
+          className="brand-logo"
+        />
 
         <div className="brand-text">
           <h2>ChurnIQ</h2>
@@ -53,20 +56,17 @@ function Sidebar() {
 
       {/* Footer */}
       <div className="sidebar-footer">
-
         <div
           className="system-status"
           title="System Operational"
         >
           <span className="status-dot"></span>
-
           <span className="system-status-text">
             System Operational
           </span>
         </div>
 
         <p>ChurnIQ v1.0.0</p>
-
       </div>
     </aside>
   );
